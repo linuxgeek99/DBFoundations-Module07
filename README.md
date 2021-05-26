@@ -8,7 +8,7 @@
 
 ###### A SQL UDF evaluates an arbitrary SQL expression and returns the result(s) of the expression. Built-in functions do not always offer the desired functionality. To customize to our specific needs, we need to create our own functions that can be used at various places. A UDF is shown below which checks for the meeting date and time based on a meeting ID parameter passed.
 
--- Make a function that will get the meeting date and time based on a meeting ID
+########-- Make a function that will get the meeting date and time based on a meeting ID
 CREATE or ALTER FUNCTION dbo.fGetMeetingDateTime (@MeetingId int)
 RETURNS DATETIME
 AS
@@ -78,7 +78,6 @@ BEGIN
         'Staff'
     FROM
         sales.staffs;
-
     INSERT INTO @contacts
     SELECT 
         first_name, 
